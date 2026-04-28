@@ -163,7 +163,7 @@ export function RevealSection({ id, children, className, contentClassName }: Rev
           <div className="relative container mx-auto w-full px-4 md:px-6">
             <motion.div
               className={cn(
-                "relative overflow-hidden rounded-[2rem] border border-[#B87333]/25 bg-[linear-gradient(180deg,rgba(5,21,29,0.84),rgba(6,26,30,0.68))] px-5 py-10 shadow-2xl backdrop-blur-xl sm:px-8 md:px-10 md:py-14",
+                "relative overflow-hidden rounded-[2rem] border border-[#B87333]/25 bg-[linear-gradient(180deg,rgba(0,0,0,0.48),rgba(0,0,0,0.68)),linear-gradient(180deg,rgba(5,21,29,0.78),rgba(6,26,30,0.62))] px-5 py-10 shadow-2xl backdrop-blur-xl sm:px-8 md:px-10 md:py-14",
                 contentClassName,
               )}
               style={{

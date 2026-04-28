@@ -181,8 +181,10 @@ export default function Page() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(6,48,58,0.58),transparent_42%),linear-gradient(180deg,#03121B_0%,#05161C_38%,#071B14_100%)]" />
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_8%,rgba(224,161,90,0.12),transparent_25%),radial-gradient(circle_at_20%_30%,rgba(10,65,58,0.22),transparent_38%),radial-gradient(circle_at_80%_70%,rgba(184,115,51,0.10),transparent_26%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-30 bg-black" />
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-[linear-gradient(180deg,rgba(0,0,0,0.68),rgba(0,0,0,0.9)),radial-gradient(circle_at_top,rgba(6,42,48,0.48),transparent_42%),linear-gradient(180deg,#03121B_0%,#05161C_38%,#071B14_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_8%,rgba(224,161,90,0.08),transparent_25%),radial-gradient(circle_at_20%_30%,rgba(10,65,58,0.18),transparent_38%),radial-gradient(circle_at_80%_70%,rgba(184,115,51,0.07),transparent_26%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_42%,rgba(0,0,0,0.62)_100%)]" />
 
       <motion.header
         className="sticky top-0 z-50 w-full border-b border-[#B87333]/20 bg-[#04131B]/70 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#04131B]/55"
@@ -227,7 +229,7 @@ export default function Page() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="relative rounded-[2rem] border border-[#B87333]/28 bg-[linear-gradient(180deg,rgba(5,21,29,0.84),rgba(6,26,30,0.68))] px-5 py-10 shadow-2xl backdrop-blur-xl sm:px-8 md:px-14 md:py-20">
+            <div className="relative rounded-[2rem] border border-[#B87333]/30 bg-[linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.66)),linear-gradient(180deg,rgba(5,21,29,0.78),rgba(6,26,30,0.62))] px-5 py-10 shadow-2xl backdrop-blur-xl sm:px-8 md:px-14 md:py-20">
               <div className="mx-auto mb-10 max-w-3xl text-center">
                 <RevealText className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#D08A45]/70">
                   Cinematic Scroll Story
