@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Copper glow effect for text */
+  .glow-text {
+    color: #D08A45;
+    text-shadow: 0 0 10px rgba(184, 115, 51, 0.6), 0 0 20px rgba(184, 115, 51, 0.4), 0 0 30px rgba(184, 115, 51, 0.2);
+    animation: copper-glow 3s ease-in-out infinite;
+  }
+  @keyframes copper-glow {
+    0%, 100% {
+      text-shadow: 0 0 10px rgba(184, 115, 51, 0.6), 0 0 20px rgba(184, 115, 51, 0.4), 0 0 30px rgba(184, 115, 51, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 15px rgba(208, 138, 69, 0.8), 0 0 30px rgba(208, 138, 69, 0.5), 0 0 45px rgba(208, 138, 69, 0.3);
+    }
+  }
+  /* Copper gradient text effect */
+  .copper-gradient-text {
+    background: linear-gradient(135deg, #B87333 0%, #D08A45 50%, #E0A15A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Copper border glow */
+  .copper-border-glow {
+    border-color: rgba(184, 115, 51, 0.5);
+    box-shadow: 0 0 15px rgba(184, 115, 51, 0.2), inset 0 0 15px rgba(184, 115, 51, 0.05);
+  }
+  /* Copper hover glow */
+  .copper-hover-glow:hover {
+    box-shadow: 0 0 20px rgba(184, 115, 51, 0.4), 0 0 40px rgba(184, 115, 51, 0.2);
+  }
+  /* Glass card effect */
+  .glass-card {
+    background: rgba(6, 26, 30, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(184, 115, 51, 0.3);
+  }
+}
+
+@layer base {
+  :root {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    /* Deep navy/teal luxury background */
+    --background: 190 71% 7%;
+    --foreground: 30 50% 75%;
+    /* Card surfaces - slightly lighter dark blue-green */
+    --card: 190 60% 9%;
+    --card-foreground: 30 50% 75%;
+    --popover: 190 60% 9%;
+    --popover-foreground: 30 50% 75%;
+    /* Copper primary accent */
+    --primary: 28 56% 52%;
+    --primary-foreground: 190 71% 7%;
+    /* Secondary - dark teal */
+    --secondary: 190 50% 12%;
+    --secondary-foreground: 30 50% 75%;
+    /* Muted - softer copper/bronze */
+    --muted: 190 40% 15%;
+    --muted-foreground: 30 40% 60%;
+    /* Copper accent */
+    --accent: 28 56% 52%;
+    --accent-foreground: 190 71% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    /* Copper-tinted border */
+    --border: 28 30% 25%;
+    --input: 190 50% 12%;
+    --ring: 28 56% 52%;
+    --chart-1: 28 70% 50%;
+    --chart-2: 190 60% 45%;
+    --chart-3: 35 80% 55%;
+    --chart-4: 195 65% 40%;
+    --chart-5: 25 75% 55%;
+    --radius: 0.5rem;
+    --sidebar-background: 190 71% 7%;
+    --sidebar-foreground: 30 50% 75%;
+    --sidebar-primary: 28 56% 52%;
+    --sidebar-primary-foreground: 190 71% 7%;
+    --sidebar-accent: 190 50% 15%;
+    --sidebar-accent-foreground: 30 50% 75%;
+    --sidebar-border: 28 30% 25%;
+    --sidebar-ring: 28 56% 52%;
+  }
+  .dark {
+    --background: 190 71% 7%;
+    --foreground: 30 50% 75%;
+    --card: 190 60% 9%;
+    --card-foreground: 30 50% 75%;
+    --popover: 190 60% 9%;
+    --popover-foreground: 30 50% 75%;
+    --primary: 28 56% 52%;
+    --primary-foreground: 190 71% 7%;
+    --secondary: 190 50% 12%;
+    --secondary-foreground: 30 50% 75%;
+    --muted: 190 40% 15%;
+    --muted-foreground: 30 40% 60%;
+    --accent: 28 56% 52%;
+    --accent-foreground: 190 71% 7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 30% 25%;
+    --input: 190 50% 12%;
+    --ring: 28 56% 52%;
+    --chart-1: 28 70% 50%;
+    --chart-2: 190 60% 45%;
+    --chart-3: 35 80% 55%;
+    --chart-4: 195 65% 40%;
+    --chart-5: 25 75% 55%;
+    --sidebar-background: 190 71% 7%;
+    --sidebar-foreground: 30 50% 75%;
+    --sidebar-primary: 28 56% 52%;
+    --sidebar-primary-foreground: 190 71% 7%;
+    --sidebar-accent: 190 50% 15%;
+    --sidebar-accent-foreground: 30 50% 75%;
+    --sidebar-border: 28 30% 25%;
+    --sidebar-ring: 28 56% 52%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background:
+      radial-gradient(circle at top, rgba(9, 58, 63, 0.32), transparent 30%),
+      linear-gradient(180deg, #03121b 0%, #05161c 36%, #071b14 100%);
+    color: #d8b089;
+  }
+}
