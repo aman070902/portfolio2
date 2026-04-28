@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card"
 
 import ContactForm from "./components/contact-form"
 import MobileNav from "./components/mobile-nav"
+import ParallaxBackground from "./components/parallax-background"
 import ProjectCard from "./components/project-card"
 import TechStack from "./components/tech-stack"
 import { AnimatedCard, ParallaxSection, RevealSection, RevealText, SpotlightSection } from "./components/story-motion"
@@ -185,6 +186,7 @@ export default function Page() {
       <div className="pointer-events-none fixed inset-0 -z-20 bg-[linear-gradient(180deg,rgba(0,0,0,0.68),rgba(0,0,0,0.9)),radial-gradient(circle_at_top,rgba(6,42,48,0.48),transparent_42%),linear-gradient(180deg,#03121B_0%,#05161C_38%,#071B14_100%)]" />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_8%,rgba(224,161,90,0.08),transparent_25%),radial-gradient(circle_at_20%_30%,rgba(10,65,58,0.18),transparent_38%),radial-gradient(circle_at_80%_70%,rgba(184,115,51,0.07),transparent_26%)]" />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_42%,rgba(0,0,0,0.62)_100%)]" />
+      <ParallaxBackground />
 
       <motion.header
         className="sticky top-0 z-50 w-full border-b border-[#B87333]/20 bg-[#04131B]/70 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#04131B]/55"
