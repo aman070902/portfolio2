@@ -1,32 +1,57 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
 import type React from "react"
+import type { Metadata, Viewport } from "next"
+import { Inter, Space_Mono, Bebas_Neue } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { SmoothScroll } from "@/components/smooth-scroll"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+})
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+})
 
 export const metadata: Metadata = {
-  title: "Aman Verma - Computer Science Professional",
+  title: "Aman Verma | Software Engineer",
   description:
-    "Computer science professional specializing in software engineering and cloud computing. Portfolio showcasing projects, experience, and technical skills.",
-  icons: {
-    icon: "/favicon.svg",
+    "Software Engineer specializing in Backend, Cloud, and Systems. Building scalable systems, real-time platforms, and production-ready software.",
+  keywords: ["Software Engineer", "Backend Developer", "Cloud", "Systems", "Full Stack", "Python", "Go", "TypeScript"],
+  authors: [{ name: "Aman Verma" }],
+  openGraph: {
+    title: "Aman Verma | Software Engineer",
+    description: "Building scalable systems, real-time platforms, and production-ready software.",
+    type: "website",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-[#061A1E]">
-      <body className={cn("min-h-screen bg-[#061A1E] font-sans antialiased", inter.className)}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+    <html lang="en" className="dark bg-background">
+      <body
+        className={`${inter.variable} ${spaceMono.variable} ${bebasNeue.variable} font-sans antialiased overflow-x-hidden`}
+      >
+        <div className="noise-overlay" aria-hidden="true" />
+        <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
       </body>
     </html>
   )
